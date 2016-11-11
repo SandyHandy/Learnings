@@ -43,7 +43,7 @@ public class StringOperationPactice {
 
 	private static int LastOccurenceIndex(String OrgiString, String subString) {
 		int indexOfSubString = OrgiString.lastIndexOf(subString);
-
+		System.out.println("For now the index is = " + indexOfSubString);
 		return indexOfSubString;
 	}
 
