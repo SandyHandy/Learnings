@@ -30,6 +30,10 @@ public class Dish {
 		this.type = type;
 		this.color = color;
 	}
+	
+	public boolean isVagetarian(){
+		return (this.type == Type.VEG);
+	}
 	/**
 	 * @return the name
 	 */
@@ -65,12 +69,16 @@ public class Dish {
     
 	public static final  List<Dish> menu = Arrays.asList(new Dish("pork", false, 800, Dish.Type.MEAT, "red"),
         new Dish("beef", false, 700, Dish.Type.MEAT,"brown"),
-        new Dish("chicken", false, 400, Dish.Type.MEAT, "white"),
-        new Dish("french fries", true, 530, Dish.Type.OTHER,"yellow"),
+       
+        new Dish("french fries", true, 530, Dish.Type.VEG,"yellow"),
         new Dish("rice", true, 350, Dish.Type.OTHER, "white"),
-        new Dish("season fruit", true, 120, Dish.Type.OTHER, "other"),
+        new Dish("season fruit", true, 120, Dish.Type.VEG, "other"),
         new Dish("pizza", true, 550, Dish.Type.OTHER, "red"),
         new Dish("prawns", false, 400, Dish.Type.FISH, "red"),
-        new Dish("salmon", false, 450, Dish.Type.FISH, "red")); 
+        new Dish("salmon", false, 450, Dish.Type.FISH, "red"),
+        new Dish("chicken", false, 400, Dish.Type.MEAT, "white")); 
 	
+	public boolean isMeat(){
+		return (this.getType()==Type.MEAT);
+	}
 }
