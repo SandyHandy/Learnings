@@ -1,7 +1,7 @@
 package lambdasinaction.chap5.my;
 
 import static java.util.stream.Collectors.toList;
-import static lambdasinaction.chap4.Dish.menu;
+
 
 import java.util.List;
 
@@ -16,6 +16,13 @@ public class Filtering {
 				.collect(toList());
 		
 		redDish.forEach(System.out::println);
+		
+		List<String> highCaloriesDish = Dish.menu
+				.stream().filter(s->s.getCalories()>300)
+				.map(Dish::getName)
+				.collect(toList());
+		
+		highCaloriesDish.forEach(System.out::println);
 	}
 	
 }
