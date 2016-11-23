@@ -78,7 +78,7 @@ public class PuttingIntoPractice {
 		
 		/*6. Print all transactions’ values from the traders living in Cambridge. */
 		
-		
+		transactions.stream().map(Transaction::getTrader).collect(toList());
 		
 		 /* 7. What’s the highest value of all the transactions?*/
 		/*8. Find the transaction with the smallest value*/
