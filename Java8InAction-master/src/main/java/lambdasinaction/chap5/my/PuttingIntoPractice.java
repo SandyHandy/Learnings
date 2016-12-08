@@ -70,9 +70,19 @@ public class PuttingIntoPractice {
 		
 //		Trader =get all the trader, filer, findAny
 		Optional<Trader> miladTrader = transactions.stream().map(Transaction::getTrader).filter(trader->trader.getCity().equals("Milan")).findAny();
+		miladTrader.ifPresent(t->System.out.println(t));
 		
 //		6. Print all transactions’ values from the traders living in Cambridge.
+		System.out.println("**** transactions’ values from the traders living in Cambridge ****");
+		transactions.parallelStream()
+			.filter(transaction->transaction.getTrader().getCity().equals("Cambridge"))
+			.map(Transaction::getValue)
+			.collect(toList())
+			.forEach(System.out::println);
+		
+		
 //		7. What’s the highest value of all the transactions?
+		
 //		8. Find the transaction with the smallest value.
 		
 		 /*Find all transactions in the year 2011 and sort them by value (small to high).*/
