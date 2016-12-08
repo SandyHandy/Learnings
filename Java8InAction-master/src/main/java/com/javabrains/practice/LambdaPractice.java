@@ -4,10 +4,18 @@ import java.util.function.Predicate;
 
 public class LambdaPractice {
 
+	public static void main(String[] args) {
 	
-	
-	public static void caculate(Predicate<String> p){
-		
-	p.toString();   
+		MyTestLambda myTestLambda = ()->System.out.println("Checking the Lambda Interface");
+		myTestLambda.something();
 	}
+	
+	
+	
+
+}
+
+@FunctionalInterface
+interface MyTestLambda{
+	public void something();
 }
