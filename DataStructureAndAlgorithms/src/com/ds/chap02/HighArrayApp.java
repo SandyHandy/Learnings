@@ -15,16 +15,22 @@ public class HighArrayApp {
 		highArray.insert(4);
 		highArray.insert(4);
 		highArray.insert(4);
+		highArray.insert(34);
 		highArray.insert(88);
 		highArray.insert(4);
+		highArray.insert(4);
+		highArray.insert(4);
 		highArray.insert(3);
+		highArray.insert(24);
+		highArray.insert(32);
+		
 		highArray.display();
 		System.out.println("Size: " + highArray.size());
 		
 		System.out.println("Finding 45 = " +highArray.find(45));
 		
 	
-		highArray.delete(33);
+		highArray.deleteAllOf(4);
 		System.out.println("Size: " + highArray.size());
 		
 		highArray.display();
