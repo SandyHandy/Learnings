@@ -1,4 +1,7 @@
 package com.ds.chap02;
+
+import java.util.BitSet;
+
 //Dups Allowed
 public class HighArray implements ArrayADT {
 
@@ -31,8 +34,37 @@ public class HighArray implements ArrayADT {
 
 	@Override
 	//no dups
-	public void delete(int elem) {
+	/// did not work  the way I wanted
+	public void deleteAllOf(int elem) {
 		// TODO Auto-generated method stub
+		
+		
+		for(int i=0; i<index; i++){
+			if(elem == elems[i]){
+				int offset=1;
+				for(int k=i; k<index; k++){
+					//special case when the elements are next to each, other elements to be removed
+					if(elems[k+1]!=elem){
+						elems[k] = elems[k+1];
+					}else if (elems[k+1]==elem){
+						offset++;
+					elems[k]=elems[k+offset];
+					}
+				}
+				
+			}	
+		}
+		
+	}
+	
+	
+	
+
+	public void deleteDupsOf(int elem) {
+		// TODO Auto-generated method stub
+		
+		BitSet bitSet = new BitSet(elems.length);
+		
 		for(int i=0; i<index; i++){
 			if(elem == elems[i]){
 				int offset=1;
@@ -40,7 +72,6 @@ public class HighArray implements ArrayADT {
 					//special case when the elements are next to each, other elements to be removed
 					if(elems[k+1]==elem){
 						offset=2;
-						
 					}
 					elems[k]=elems[k+offset];
 				}
@@ -60,6 +91,13 @@ public class HighArray implements ArrayADT {
 		for(int i=0; i<index; i++){
 			System.out.println("elems["+i+"]"+"="+elems[i]);
 		}
+	}
+
+
+
+	public void deleteAllDups() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

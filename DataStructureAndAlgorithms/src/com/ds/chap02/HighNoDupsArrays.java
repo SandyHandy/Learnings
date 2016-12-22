@@ -32,12 +32,13 @@ public class HighNoDupsArrays implements ArrayADT {
 	}
 
 	@Override
-	public void delete(int elem) {
+	public void deleteAllOf(int elem) {
 		// TODO Auto-generated method stub
 		for(int i=0; i<index; i++){
 			if(elem==elems[i]){
 				for(int k=i; k<index; k++){
 					elems[k]=elems[k+1];
+					
 				}
 				break;
 			}
@@ -56,5 +57,7 @@ public class HighNoDupsArrays implements ArrayADT {
 			System.out.println("elems["+i+"]"+"="+elems[i]);
 		}
 	}
+
+
 	
 }
