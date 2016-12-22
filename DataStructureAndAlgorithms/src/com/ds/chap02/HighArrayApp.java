@@ -13,8 +13,8 @@ public class HighArrayApp {
 		highArray.insert(6);
 		highArray.insert(4);
 		highArray.insert(4);
-		highArray.insert(4);
-		highArray.insert(4);
+//		highArray.insert(4);
+//		highArray.insert(4);
 		highArray.insert(88);
 		highArray.insert(4);
 		highArray.insert(3);
@@ -24,7 +24,7 @@ public class HighArrayApp {
 		System.out.println("Finding 45 = " +highArray.find(45));
 		
 	
-		highArray.delete(33);
+		highArray.delete(4);
 		System.out.println("Size: " + highArray.size());
 		
 		highArray.display();
