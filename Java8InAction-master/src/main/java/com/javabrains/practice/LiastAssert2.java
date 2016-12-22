@@ -31,10 +31,12 @@ public class LiastAssert2 {
 		//If that matches with reponse Code
 		String actualValue = "";
 		String expectedNode = "responseStatus";
+		String expectedNodeValue = "0";
 		String expectedNodeAttr = "code";
 		String expectedNodeAttrValue = "100";
 		String actualAttValue = "";
 		String actualAttName = "";
+		String actutalNodeValue = "";
 		try {
 			
 			//Read the Xml in to Document
@@ -47,6 +49,7 @@ public class LiastAssert2 {
 			
 			//Check is the Expected node is present
 			NodeList list = document.getElementsByTagNameNS("*", expectedNode);
+			actutalNodeValue = list.item(0).getNodeValue();
 			System.out.println("The Response Status found and size is = " + list.getLength());
 			
 			System.out.println("The Attritube at 2 = " + list.item(0).getAttributes().item(0).getNodeName());
